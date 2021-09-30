@@ -1,0 +1,173 @@
+---
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "ITU"
+host: "itu.swagger.io"
+basePath: "/v1"
+schemes:
+- "https"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+paths:
+  /student/getStudents/:
+    get:
+      tags:
+      - "Student"
+      summary: "Returns a student by ID."
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/Student"
+  /student/addStudent:
+    post:
+      tags:
+      - "Student"
+      summary: "Creates a new Student."
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+  /student/updateStudent:
+    put:
+      tags:
+      - "Student"
+      summary: "Updates a student"
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+  /student/removeStudent:
+    delete:
+      tags:
+      - "Student"
+      summary: "Deletes a student."
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+  /course/getCourses/:
+    get:
+      tags:
+      - "Course"
+      summary: "Returns a course by ID."
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/Course"
+  /course/addCourse:
+    post:
+      tags:
+      - "Course"
+      summary: "Creates a new Course."
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+  /course/updateCourse:
+    put:
+      tags:
+      - "Course"
+      summary: "Updates a course"
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+  /course/removeCourse:
+    delete:
+      tags:
+      - "Course"
+      summary: "Deletes a course."
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+  /teacher/getTeacher:
+    get:
+      tags:
+      - "Teacher"
+      summary: "Returns a teacher by ID."
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/Teacher"
+  /teacher/addTeacher:
+    post:
+      tags:
+      - "Teacher"
+      summary: "Creates a new Teacher."
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+  /teacher/updateTeacher:
+    put:
+      tags:
+      - "Teacher"
+      summary: "Updates a Teacher"
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+  /teacher/removeTeacher:
+    delete:
+      tags:
+      - "Teacher"
+      summary: "Deletes a Teacher."
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+definitions:
+  Student:
+    required:
+    - "id"
+    - "name"
+    properties:
+      id:
+        type: "integer"
+      name:
+        type: "string"
+    example:
+      name: "name"
+      id: 0
+  Course:
+    required:
+    - "id"
+    - "name"
+    properties:
+      id:
+        type: "integer"
+      name:
+        type: "string"
+      listOfStudents:
+        type: "array"
+        items:
+          type: "object"
+          properties: {}
+    example:
+      name: "name"
+      listOfStudents:
+      - "{}"
+      - "{}"
+      id: 0
+  Teacher:
+    required:
+    - "id"
+    - "name"
+    properties:
+      id:
+        type: "integer"
+      name:
+        type: "string"
+    example:
+      name: "name"
+      id: 0
