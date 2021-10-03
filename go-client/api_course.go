@@ -159,7 +159,8 @@ func (a *CourseApiService) CourseGetCoursesGet(ctx context.Context) (Course, *ht
 			body: localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+	
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v Course
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
