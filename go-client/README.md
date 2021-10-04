@@ -23,13 +23,18 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *CourseApi* | [**CourseAddCoursePost**](docs/CourseApi.md#courseaddcoursepost) | **Post** /course/addCourse | Creates a new Course.
 *CourseApi* | [**CourseGetCoursesGet**](docs/CourseApi.md#coursegetcoursesget) | **Get** /course/getCourses/ | Returns a course by ID.
+*CourseApi* | [**CourseGetECTSGet**](docs/CourseApi.md#coursegetectsget) | **Get** /course/getECTS/ | Returns the ECTS of the course
+*CourseApi* | [**CourseGetRatingGet**](docs/CourseApi.md#coursegetratingget) | **Get** /course/getRating/ | Returns the rating of the course
+*CourseApi* | [**CourseGetStudentsGet**](docs/CourseApi.md#coursegetstudentsget) | **Get** /course/getStudents/ | Returns a course&#39;s students
+*CourseApi* | [**CourseGetTeachersGet**](docs/CourseApi.md#coursegetteachersget) | **Get** /course/getTeachers/ | Returns a course&#39;s teachers.
 *CourseApi* | [**CourseRemoveCourseDelete**](docs/CourseApi.md#courseremovecoursedelete) | **Delete** /course/removeCourse | Deletes a course.
 *CourseApi* | [**CourseUpdateCoursePut**](docs/CourseApi.md#courseupdatecourseput) | **Put** /course/updateCourse | Updates a course
 *StudentApi* | [**StudentAddStudentPost**](docs/StudentApi.md#studentaddstudentpost) | **Post** /student/addStudent | Creates a new Student.
-*StudentApi* | [**StudentGetStudentsGet**](docs/StudentApi.md#studentgetstudentsget) | **Get** /student/getStudents/ | Returns a student by ID.
+*StudentApi* | [**StudentGetStudentGet**](docs/StudentApi.md#studentgetstudentget) | **Get** /student/getStudent/ | Returns a student by ID.
 *StudentApi* | [**StudentRemoveStudentDelete**](docs/StudentApi.md#studentremovestudentdelete) | **Delete** /student/removeStudent | Deletes a student.
 *StudentApi* | [**StudentUpdateStudentPut**](docs/StudentApi.md#studentupdatestudentput) | **Put** /student/updateStudent | Updates a student
 *TeacherApi* | [**TeacherAddTeacherPost**](docs/TeacherApi.md#teacheraddteacherpost) | **Post** /teacher/addTeacher | Creates a new Teacher.
+*TeacherApi* | [**TeacherGetPopularityScoreGet**](docs/TeacherApi.md#teachergetpopularityscoreget) | **Get** /teacher/getPopularityScore | Returns a teachers popularity score
 *TeacherApi* | [**TeacherGetTeacherGet**](docs/TeacherApi.md#teachergetteacherget) | **Get** /teacher/getTeacher | Returns a teacher by ID.
 *TeacherApi* | [**TeacherRemoveTeacherDelete**](docs/TeacherApi.md#teacherremoveteacherdelete) | **Delete** /teacher/removeTeacher | Deletes a Teacher.
 *TeacherApi* | [**TeacherUpdateTeacherPut**](docs/TeacherApi.md#teacherupdateteacherput) | **Put** /teacher/updateTeacher | Updates a Teacher

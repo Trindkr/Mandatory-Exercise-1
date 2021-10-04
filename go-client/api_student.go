@@ -99,7 +99,7 @@ StudentApiService Returns a student by ID.
 
 @return Student
 */
-func (a *StudentApiService) StudentGetStudentsGet(ctx context.Context) (Student, *http.Response, error) {
+func (a *StudentApiService) StudentGetStudentGet(ctx context.Context) (Student, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -109,7 +109,7 @@ func (a *StudentApiService) StudentGetStudentsGet(ctx context.Context) (Student,
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/student/getStudents/"
+	localVarPath := a.client.cfg.BasePath + "/student/getStudent/"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}

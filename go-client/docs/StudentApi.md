@@ -5,7 +5,7 @@ All URIs are relative to *https://itu.swagger.io/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**StudentAddStudentPost**](StudentApi.md#StudentAddStudentPost) | **Post** /student/addStudent | Creates a new Student.
-[**StudentGetStudentsGet**](StudentApi.md#StudentGetStudentsGet) | **Get** /student/getStudents/ | Returns a student by ID.
+[**StudentGetStudentGet**](StudentApi.md#StudentGetStudentGet) | **Get** /student/getStudent/ | Returns a student by ID.
 [**StudentRemoveStudentDelete**](StudentApi.md#StudentRemoveStudentDelete) | **Delete** /student/removeStudent | Deletes a student.
 [**StudentUpdateStudentPut**](StudentApi.md#StudentUpdateStudentPut) | **Put** /student/updateStudent | Updates a student
 
@@ -32,8 +32,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **StudentGetStudentsGet**
-> Student StudentGetStudentsGet(ctx, )
+# **StudentGetStudentGet**
+> Student StudentGetStudentGet(ctx, )
 Returns a student by ID.
 
 ### Required Parameters

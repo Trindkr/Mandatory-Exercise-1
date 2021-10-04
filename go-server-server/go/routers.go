@@ -44,7 +44,7 @@ func NewRouter() *mux.Router {
 }
 
 func Index(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "<b>Hello</b> World!")
+	fmt.Fprintf(w, "Hello World!")
 }
 
 var routes = Routes{
@@ -70,6 +70,34 @@ var routes = Routes{
 	},
 
 	Route{
+		"CourseGetECTSGet",
+		strings.ToUpper("Get"),
+		"/v1/course/getECTS/",
+		CourseGetECTSGet,
+	},
+
+	Route{
+		"CourseGetRatingGet",
+		strings.ToUpper("Get"),
+		"/v1/course/getRating/",
+		CourseGetRatingGet,
+	},
+
+	Route{
+		"CourseGetStudentsGet",
+		strings.ToUpper("Get"),
+		"/v1/course/getStudents/",
+		CourseGetStudentsGet,
+	},
+
+	Route{
+		"CourseGetTeachersGet",
+		strings.ToUpper("Get"),
+		"/v1/course/getTeachers/",
+		CourseGetTeachersGet,
+	},
+
+	Route{
 		"CourseRemoveCourseDelete",
 		strings.ToUpper("Delete"),
 		"/v1/course/removeCourse",
@@ -91,10 +119,10 @@ var routes = Routes{
 	},
 
 	Route{
-		"StudentGetStudentsGet",
+		"StudentGetStudentGet",
 		strings.ToUpper("Get"),
-		"/v1/student/getStudents/",
-		StudentGetStudentsGet,
+		"/v1/student/getStudent/",
+		StudentGetStudentGet,
 	},
 
 	Route{
@@ -116,6 +144,13 @@ var routes = Routes{
 		strings.ToUpper("Post"),
 		"/v1/teacher/addTeacher",
 		TeacherAddTeacherPost,
+	},
+
+	Route{
+		"TeacherGetPopularityScoreGet",
+		strings.ToUpper("Get"),
+		"/v1/teacher/getPopularityScore",
+		TeacherGetPopularityScoreGet,
 	},
 
 	Route{
