@@ -1,0 +1,73 @@
+---
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "ITU"
+host: "itu.swagger.io"
+basePath: "/v1"
+schemes:
+- "https"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+paths:
+  /course/getCourses/:
+    get:
+      tags:
+      - "Course"
+      summary: "Returns a course by ID."
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/Course"
+  /course/addCourse:
+    post:
+      tags:
+      - "Course"
+      summary: "Creates a new Course."
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+  /course/updateCourse:
+    put:
+      tags:
+      - "Course"
+      summary: "Updates a course"
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+  /course/removeCourse:
+    delete:
+      tags:
+      - "Course"
+      summary: "Deletes a course."
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+definitions:
+  Course:
+    required:
+    - "id"
+    - "name"
+    properties:
+      id:
+        type: "integer"
+      name:
+        type: "string"
+      listOfStudents:
+        type: "array"
+        items:
+          type: "object"
+          properties: {}
+    example:
+      name: "name"
+      listOfStudents:
+      - "{}"
+      - "{}"
+      id: 0
