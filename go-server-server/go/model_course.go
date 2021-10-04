@@ -15,5 +15,11 @@ type Course struct {
 
 	Name string `json:"name"`
 
+	ECTS float32 `json:"ECTS,omitempty"`
+
+	Rating float32 `json:"rating,omitempty"`
+
 	ListOfStudents []interface{} `json:"listOfStudents,omitempty"`
+
+	ListOfTeachers []interface{} `json:"listOfTeachers,omitempty"`
 }

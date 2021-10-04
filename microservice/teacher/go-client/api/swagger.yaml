@@ -1,0 +1,65 @@
+---
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "ITU"
+host: "itu.swagger.io"
+basePath: "/v1"
+schemes:
+- "https"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+paths:
+  /teacher/getTeacher:
+    get:
+      tags:
+      - "Teacher"
+      summary: "Returns a teacher by ID."
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/Teacher"
+  /teacher/addTeacher:
+    post:
+      tags:
+      - "Teacher"
+      summary: "Creates a new Teacher."
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+  /teacher/updateTeacher:
+    put:
+      tags:
+      - "Teacher"
+      summary: "Updates a Teacher"
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+  /teacher/removeTeacher:
+    delete:
+      tags:
+      - "Teacher"
+      summary: "Deletes a Teacher."
+      parameters: []
+      responses:
+        "200":
+          description: "OK"
+definitions:
+  Teacher:
+    required:
+    - "id"
+    - "name"
+    properties:
+      id:
+        type: "integer"
+      name:
+        type: "string"
+    example:
+      name: "name"
+      id: 0

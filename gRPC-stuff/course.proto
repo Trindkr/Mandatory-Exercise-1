@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option go_package = "./Mandatory-Exercise-1/gRPC-stuff/gRPC";
+
+package gRPC;
+
+service CourseService {
+    rpc GetCourse (CourseID) returns (Course);
+    
+    rpc PutCourse (Course) returns (CourseResponse);
+    
+    rpc PostCourse (Course) returns (CourseResponse);
+    
+    rpc DeleteCourse (CourseID) returns (CourseResponse);
+}
+
+message Course {
+    CourseID id = 1;
+    
+    string name = 2;
+}
+
+message CourseID {
+    int32 id = 1;
+}
+
+message CourseResponse {
+    string response = 1;
+}

@@ -12,4 +12,5 @@ package swagger
 type Teacher struct {
 	Id int32 `json:"id"`
 	Name string `json:"name"`
+	PopularityScore float32 `json:"popularityScore,omitempty"`
 }
